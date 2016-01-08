@@ -30,14 +30,19 @@ void encode() {
   size_t count;
   mpz_t bignum;
   mpz_init(bignum);
+  bool first = true;
   while (true) {
     count = fread(buffer, 1, 32, stdin);
     if (count == 0) {
       break;
     }
+    // print the separating space
+    if (!first) {
+      putchar(' ');
+    }
+    first = false;
     // print the bignum in base 62
     print_chars(&bignum, buffer, count);
-    putchar(' ');
   }
   putchar('\n');
   mpz_clear(bignum);
