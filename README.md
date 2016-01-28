@@ -30,7 +30,7 @@ gpg --dearmor < /tmp/gpgfile > /dev/null  1.44s user 0.03s system 99% cpu 1.469 
 # Encode and decode it with this base 62 implementation.
 $ make
 $ time ./base62 < /tmp/randfile > /tmp/base62file
-./base62 < /tmp/randfile > /tmp/base62file  1.27s user 0.05s system 99% cpu 1.325 total
+./base62 < /tmp/randfile > /tmp/base62file  1.27s user 0.05s system 99% cpu 1.201 total
 $ time ./base62 -d < /tmp/base62file > /dev/null
-./base62 -d < /tmp/base62file > /dev/null  1.29s user 0.02s system 99% cpu 1.307 total
+./base62 -d < /tmp/base62file > /dev/null  1.29s user 0.02s system 99% cpu 1.158 total
 ```
